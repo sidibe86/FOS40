@@ -1,0 +1,275 @@
+@import url(../css/clash-display.css);
+
+/*VARIABLES*/
+:root {
+  --c-dark: #212529;
+  --c-brand: #800080;
+  --c-brand-light: #9500ff;
+  --c-brand-rgb: 128, 0, 128;
+  --c-body: #727272;
+  --font-base: "ClashDisplay", sans-serif;
+  --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.06);
+  --transition: all 0.5s ease;
+}
+
+/* RESET & HELPERS */
+body {
+  font-family: var(--font-base);
+  line-height: 1.7;
+  color: var(--c-body);
+}
+
+h1, h2, h3, h4, h5, h6 .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 600;
+  color: var(--c-dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-brand);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--c-brand-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.border-top {
+  margin-bottom: 14px;
+  padding-top: 40px;
+  padding-top: 40px;
+  border-color: var(--c-brand);
+}
+
+.section-padding {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.section-title {
+  margin-bottom: 60px;
+}
+
+.section-title .line {
+  width: 60px;
+  height: 4px;
+  background-color: var(--c-brand);
+  margin: 16px auto 24px auto;
+}
+
+.section-title .p {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar img {
+  max-width: 25%;
+  height: 25%;
+}
+
+/* NavBar*/
+.navbar {
+  box-shadow: var(--box-shadow);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 400;
+  color: var(--c-dark);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--c-brand);
+}
+
+/*BTN*/
+.btn {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 10px 24px;
+}
+
+.btn-white {
+  background-color: white;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+.btn-brand {
+  background-color: var(--c-brand);
+  color: white;
+}
+
+.btn-brand:hover {
+  background-color: var(--c-brand-light);
+  border-color: var(--c-brand-light);
+  color: white;
+
+}
+
+/*Hero*/
+#carouselExampleCaptions .carousel-item img {
+  object-fit:cover;
+  height: 70vh;
+  width: 100%;
+}
+
+#carouselExampleCaptions  {
+  width: 100%;
+}
+/*FREEMASON*/
+#freemasons {
+  position: relative;
+}
+
+#freemasons::before {
+  content: "";
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--c-brand);
+  z-index: -1;
+}
+
+#freemasons h6 {
+  color: var(--c-brand);
+}
+
+@media (max-width: 992px) {
+  #freemasons::before {
+    height: 40%;
+    width: 100%;
+  }
+}
+
+#freemasons img {
+  width: 100%;
+}
+
+.section-line {
+  width: 80px;
+  height: 10px;
+  background-color: var(--c-brand);
+  margin: 16px auto 24px auto;
+}
+
+/*TABS*/
+.tabs .nav-tabs {
+  border: 0;
+}
+
+.tabs .nav-link {
+  border: 1px solid #b9b9b9;
+  padding: 15px;
+  margin-bottom: 14px;
+  transition: 0.3s;
+  color: #111111;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tabs .nav-link i {
+  padding-right: 15px;
+  font-size: 38px;
+}
+
+.tabs .nav-link h6 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.tabs .nav-link h5 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.tabs .nav-link:hover {
+  color: var(--c-brand);
+}
+
+.tabs .nav-link.active {
+  background-color: var(--c-brand);
+  color: #fff;
+  border-color: var(--c-brand);
+}
+
+.tabs .nav-link.active h5 {
+  color: #fff;
+}
+
+.tabs .tab-content {
+  margin-top: 30px;
+}
+
+/*About*/
+#about img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.about-title {
+  font-weight: 500;
+  color: var(--c-brand);
+}
+
+/* CONTACT*/
+#contact {
+  position: relative;
+  z-index: 2;
+}
+
+#contact .form-control {
+  border-radius: 0;
+}
+
+#contact .form-control: focus {
+  box-shadow: none;
+  border-color: var(--c-brand);
+}
+
+#contact::after {
+  content: "";
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/FOS40-4.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/* FOOTER*/
+footer {
+
+  font: var(--font-base);
+
+}
+.footer-decoration {
+  font: var(--font-base);
+  color: var(--c-brand);
+}
+
+
+@media (max-width:767px) {
+  .footer-contacts {
+    margin: 30px 0;
+  }
+}
+/*login form */
+.cardbody-color{
+  background-color: #ebf2fa;
+}
